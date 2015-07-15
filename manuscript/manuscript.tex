@@ -1,0 +1,48 @@
+\documentclass[aps, twocolumn, prl, showpacs, superscriptaddress]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage[colorlinks, citecolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Title} 
+
+\author{Eun-jong Kim}
+\email{vb777@snu.ac.kr}
+\affiliation{Department of Physics and Astronomy, Seoul National University, Seoul, 151-747 Korea}
+\affiliation{QOLS, Blackett Laboratory, Imperial College London, London SW7 2BW, United Kingdom}
+
+\author{M. S. Kim}
+\email{m.kim@imperial.ac.uk}
+\affiliation{QOLS, Blackett Laboratory, Imperial College London, London SW7 2BW, United Kingdom}
+
+\begin{abstract}
+Abstract
+\end{abstract}
+
+\date{\today}
+%%\pacs{PACS}
+\maketitle
+For \emph{bounded} operators ${\hat{A}_1, \hat{A}_2, \ldots, \hat{A}_p}$, the following relation
+\begin{equation}\label{eq:generalized-trotter}
+e^{\hat{A}_1 + \hat{A}_2 + \cdots + \hat{A}_p} = \lim_{m\rightarrow \infty} \left(e^{\hat{A}_1/m} e^{\hat{A}_2/m} \cdots e^{\hat{A}_p/m}\right)^m
+\end{equation}
+is satisfied with the correction of the order of $m^{-1}$. This equation, also known as the \emph{generalized Trotter's formula} \cite{Suzuki:1976cf}, has been used as a key method of employing Monte Carlo simulation for quantum systems. The symmetrized version of Eq.~\eqref{eq:generalized-trotter},\begin{widetext}
+\begin{equation}
+e^{\hat{A}_1 + \hat{A}_2 + \cdots + \hat{A}_p} = \lim_{m\rightarrow\infty} \left(e^{\hat{A}_1/2m} e^{\hat{A}_2/2m} \cdots e^{\hat{A}_{p-1}/2m} e^{\hat{A}_p/m}e^{\hat{A}_{p-1}/2m}\cdots e^{\hat{A}_{2}/2m} e^{\hat{A}_{1}/2m} \right)^m,
+\end{equation}\end{widetext}
+is known to have the correction of order of $m^{-2}$ and therefore converges faster than Eq.~\eqref{eq:generalized-trotter}.
+
+In this paper, we open up the possibility of using this approximation as a means of simulating certain Hamiltonians experimentally.
+\section{Introduction}\label{sec:intro}
+\section{Conclusions}\label{sec:conclusion}
+In conclusion, we have introduced and analyzed a cQED setup for simulating membrane-in-the-middle optomechanical systems. Two capacitively-coupled SQUID-terminated TL resonators (resonator A) inductively coupled to a TL resonator (resonator B) were used to generate a quadratic-optomechanical-like coupling. A complete description of the Hamiltonian formulation as well as the canonical quantization procedure are provided. Although not discussed explicitly, by introducing an asymmetry in our circuit, either by applying unequal bias fluxes through the SQUIDs or moving the position of the coupling capacitor of resonator A, our circuit enters the standard linear optomechanics regime. Using realistic parameters, the ratio of the quadratic coupling strength to the pseudo-mechanical oscillation frequency is estimated as $10^{-5}$. We note that our proposal anticipates a significant improvement in the quadratic coupling strength to \emph{five orders of magnitude}, from the cavity-optomechanical systems of Refs.~\cite{Thompson:2008dx, Jayich:2008iz, Sankey:2009vs, Sankey:2010ej}.
+
+\section*{Acknowledgements}
+E.-j.~Kim was partly supported by summer research placement program of Imperial College London. Numerical calculations were performed with QuTiP \cite{Johansson20121760, Johansson20131234}.
+
+\bibliography{references}
+
+\end{document}
